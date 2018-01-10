@@ -1,19 +1,21 @@
 <?php
 $error='';
+  if(isset($_POST['submit'])){
 if($_POST){
 session_start();
   if($_POST['capcha']!=$_SESSION['capchaid']){
+    echo $_SESSION['capchaid'];
     die("Capcha was incorrect");
     session_destroy();
   }else{
 
 
-    if(isset($_POST['submit'])){
+
       if(empty($_POST['sid']) || empty($_POST['pass'])){
         $error = "Enter Username/Password";
       }else{
         include "connect.php";
-        
+
         $sid = $_POST['sid'];
         $password = $_POST['pass'];
 
@@ -29,7 +31,6 @@ session_start();
     }
   }
 }
-
 
 
 

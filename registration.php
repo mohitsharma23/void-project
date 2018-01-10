@@ -1,6 +1,6 @@
 <script>
   function myForm(form){
-    if(!form.capcha.value.match(/^\d{5}$/)){
+    if(!form.capcha.value.match(/^\d{4}$/)){
       alert("Please enter the Correct Capcha");
       form.capcha.focus();
       return false;
@@ -10,11 +10,12 @@
 </script>
 
 <?php
+session_start();
 include 'stcheck.php';
 include 'adcheck.php';
 if(isset($_SESSION['login_admin'])){
   header('location: adlogin.php');
-  
+
 }elseif(isset($_SESSION['login_staff'])){
   header('location: stlogin.php');
   include 'st_logs.php';
@@ -101,6 +102,8 @@ if(isset($_SESSION['login_admin'])){
                 </div>
                 <img src="capcha.php"><br>
                 <input type="text" size="6" maxlength="5" name="capcha" value="">
+
+
                 <br><br>
                 <div class="form-group">
                     <button id="sub" class="btn btn-success btn-md btn-block" name="submit">Log In</button>
@@ -126,11 +129,11 @@ if(isset($_SESSION['login_admin'])){
                 <div class="form-group">
                     <input type="password" id="pass" name="pass" placeholder="Password" class="form-control">
                 </div>
-                <img src="capcha.php"><br>
-                <input type="text" size="6" maxlength="5" name="capcha" value="">
+                <img src="capcha2.php"><br>
+                <input type="text" size="6" maxlength="5" name="capcha2" value="">
                 <br><br>
                 <div class="form-group">
-                    <button id="sub" class="btn btn-success btn-md btn-block" name="submit">Log In</button>
+                    <button id="sub" class="btn btn-success btn-md btn-block" name="submit1">Log In</button>
 
                 </div>
             </fieldset>

@@ -1,14 +1,15 @@
 <?php
 $error = '';
+if(isset($_POST['submit1'])){
 if($_POST){
 session_start();
-  if($_POST['capcha']!=$_SESSION['capchaid']){
+  if($_POST['capcha2']!=$_SESSION['capchaid2']){
     die("Capcha was incorrect");
     session_destroy();
   }else{
 
 
-    if(isset($_POST['submit'])){
+
       if(empty($_POST['uid']) || empty($_POST['pass'])){
         $error = "Enter Username/Password";
       }else{
