@@ -1,5 +1,15 @@
+<script>
+  function myForm(form){
+    if(!form.capcha.value.match(/^\d{5}$/)){
+      alert("Please enter the Correct Capcha");
+      form.capcha.focus();
+      return false;
+    }
+    return true;
+  }
+</script>
+
 <?php
-session_start();
 include 'stcheck.php';
 include 'adcheck.php';
 if(isset($_SESSION['login_admin'])){
@@ -35,7 +45,7 @@ if(isset($_SESSION['login_admin'])){
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 
 	<script src="js/jquery-1.11.1.min.js" type="application/javascript"></script>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
 
 
 </head><!--/head-->
@@ -79,7 +89,7 @@ if(isset($_SESSION['login_admin'])){
     <section id="registration" class="container">
         <div class="center" role="form">
           <h2>Staff Login</h2>
-          <form action="" method="POST">
+          <form action="" method="POST" onsubmit="return myForm(this);">
             <fieldset class="registration-form">
                 <div class="form-group">
                     <input type="text" id="sid" name="sid" placeholder="ID" class="form-control">
@@ -87,7 +97,9 @@ if(isset($_SESSION['login_admin'])){
                 <div class="form-group">
                     <input type="password" id="pass" name="pass" placeholder="Password" class="form-control">
                 </div>
-                <div class="g-recaptcha" data-sitekey="6Lc6HEAUAAAAAMBosQ5qH7BJEqp0UHMrO-_t_ll_"></div><br>
+                <img src="capcha.php"><br>
+                <input type="text" size="6" maxlength="5" name="capcha" value="">
+                <br><br>
                 <div class="form-group">
                     <button id="sub" class="btn btn-success btn-md btn-block" name="submit">Log In</button>
 
@@ -112,7 +124,9 @@ if(isset($_SESSION['login_admin'])){
                 <div class="form-group">
                     <input type="password" id="pass" name="pass" placeholder="Password" class="form-control">
                 </div>
-                <div class="g-recaptcha" data-sitekey="6Lc6HEAUAAAAAMBosQ5qH7BJEqp0UHMrO-_t_ll_"></div><br>
+                <img src="capcha.php"><br>
+                <input type="text" size="6" maxlength="5" name="capcha" value="">
+                <br><br>
                 <div class="form-group">
                     <button id="sub" class="btn btn-success btn-md btn-block" name="submit">Log In</button>
 

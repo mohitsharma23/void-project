@@ -92,7 +92,7 @@ if(isset($_SESSION['login_admin'])){
       include "connect.php";
       $ngoid = $row['ngoid'];
       $kid = $_POST['kid'];
-      $query = mysql_query("SELECT last(*) from child where kid='$kid' AND status='a' AND ngoid='$ngoid'");
+      $query = mysql_query("SELECT * from child where kid='$kid' AND status='a' AND ngoid='$ngoid'");
       $row = mysql_fetch_assoc($query);
       if($row){
         ?>

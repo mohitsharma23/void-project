@@ -1,6 +1,9 @@
 <?php
 $msg = '';
 if(isset($_POST['submit'])){
+if(strpos($_POST["email"],'@')){
+	if(strpos($_POST["email"],'.com') || strpos($_POST["email"],'.in')){
+		
   $to = $_POST['email']; //"psycjoker@gmail.com";
   $subject = "Query";
 
@@ -18,6 +21,6 @@ if(isset($_POST['submit'])){
     $msg = "error";
   }
 }
-
-
+}
+}
  ?>

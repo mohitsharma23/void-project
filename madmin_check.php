@@ -1,6 +1,11 @@
 <?php
+$error = '';
+if($_POST){
 session_start();
-    $error ='';
+  if($_POST['capcha']!=$_SESSION['capchaid']){
+    die("Capcha was incorrect");
+    session_destroy();
+  }else{
     if(isset($_POST['submit'])){
       include 'connect.php';
 
@@ -15,4 +20,6 @@ session_start();
         $error = "Either Id/Password is incorrect";
       }
     }
+  }
+}
 ?>

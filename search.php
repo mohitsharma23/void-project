@@ -45,6 +45,12 @@
           </div>
       </div>
   </header><!--/header-->
+<?php
+date_default_timezone_set('Asia/Kolkata');
+$date = date('Y-m-d');
+
+ ?>
+
 
 <section class="search_main container">
 <form action="search.php" method="POST">
@@ -53,7 +59,7 @@
     <div class="col-sm-4">
       <div class="form-group">
         <label for="age">Enter Date of Birth:</label>
-          <input type="text" class="form-control" id="age" name="by_dob" placeholder="YYYY-MM-DD">
+          <input type="date" class="form-control" id="age" name="by_dob" max="<?php echo $date; ?>">
       </div>
     </div>
     <div class="col-sm-4">

@@ -74,6 +74,9 @@ if(isset($_SESSION['login_master'])){
                   <div class="form-group">
                       <input type="password" id="pass" name="pass" placeholder="Password" class="form-control">
                   </div>
+                  <center><img src="capcha.php"><br>
+                  <input type="text" size="6" maxlength="5" name="capcha" value=""></center>
+                  <br><br>
                   <div class="form-group">
                       <button id="sub" class="btn btn-success btn-md btn-block" name="submit">Log In</button><br>
                       <span><?php echo $error; ?></span>

@@ -127,6 +127,13 @@
             <div class="form-group">
               <div class="text-center">
                 <button type="submit" name="submit" class="btn btn-default">Submit</button><br>
+                <?php if(empty($error)){
+                }else{
+                  ?>
+                    <script>alert("<?php echo $error; ?>");</script>
+                  <?php
+                } ?>
+
                 <span><?php echo $error; ?></span>
               </div>
             </div>

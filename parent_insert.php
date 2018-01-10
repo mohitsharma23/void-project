@@ -22,8 +22,9 @@ $kadhid = $_POST['kadhid'];
 // }
 
 $imageData = mysql_real_escape_string(file_get_contents($_FILES["image"]["tmp_name"]));
+$imageType = mysql_real_escape_string($_FILES["image"]["type"]);
 
-if(substr($imageType,0,5) == "image" && substr($firType,0,5) == "image"){
+if(substr($imageType,0,5) == "image"){
   $insert = "INSERT INTO parent values('$adhid', '$name', '$contact', '$email', '$addr', '$firno', '$location', '$time', '$kadhid', '$imageData')";
   if(!mysql_query($insert)){
     echo "Error" .mysql_error();

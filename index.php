@@ -94,27 +94,38 @@
             </div>
         </div>
     </header><!--/header-->
+
+
+
+
+
+
+
+
     <section id="main-slider" class="no-margin">
         <div class="carousel slide wet-asphalt">
             <ol class="carousel-indicators">
                 <li data-target="#main-slider" data-slide-to="0" class="active"></li>
                 <li data-target="#main-slider" data-slide-to="1"></li>
-                <li data-target="#main-slider" data-slide-to="2"></li>
             </ol>
-
             <div class="carousel-inner">
-                <div class="item active" style="background-image: url(images/slider/b1.png)">
+                <div class="item active" style="background-image: url(images/slider/b.png)">
+
                 </div><!--/.item-->
 
-                <div class="item" style="background-image: url(images/slider/b2.png)">
+                <div class="item" style="background-image: url(images/slider/b4.png)">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="carousel-content centered">
+                                    <h1 style="font-family:Eras Bold ITC; font-size:50px;" class="animation animated-item-1">WE CARE..</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div><!--/.item-->
-
-                <div class="item" style="background-image: url(images/slider/b3.png)">
-                </div><!--/.item-->
-
             </div><!--/.carousel-inner-->
         </div><!--/.carousel-->
-
         <a class="prev hidden-xs" href="#main-slider" data-slide="prev">
             <i class="icon-angle-left"></i>
         </a>
@@ -122,6 +133,15 @@
             <i class="icon-angle-right"></i>
         </a>
     </section><!--/#main-slider-->
+
+
+
+
+
+
+
+
+
 
     <section id="services" class="emerald">
         <div class="container">
@@ -252,7 +272,7 @@
                                             <div class="item-inner">
 
                                                 <h3>
-                                                    Nova - Corporate site template
+                                                    'REVIEWS'
 
                                                     <br><br><br><br><br><br><br><br><br>
                                                 </h3>
@@ -269,12 +289,12 @@
                                             <div class="item-inner">
 
                                                 <h3>
-                                                    Nova - Corporate site template
+                                                    'REVIEWS'
 
                                                     <br><br><br><br><br><br><br><br><br>
                                                 </h3>
 
-                                                <h5 style="text-align:right;">--- &nbsp;Sachin Gupta</h5><br>
+                                                <h5 style="text-align:right;">--- &nbsp;Lakshay Khandelwal</h5><br>
                                             </div>
                                         </div>
                                     </div>
@@ -285,12 +305,12 @@
                                             <div class="item-inner">
 
                                                 <h3>
-                                                    Nova - Corporate site template
+                                                    'REVIEWS'
 
                                                     <br><br><br><br><br><br><br><br><br>
                                                 </h3>
 
-                                                <h5 style="text-align:right;">--- &nbsp;Sachin Gupta</h5><br>
+                                                <h5 style="text-align:right;">--- &nbsp;Priyank Makwana</h5><br>
                                             </div>
                                         </div>
                                     </div>
@@ -312,12 +332,12 @@
                                           <div class="item-inner">
 
                                               <h3>
-                                                  Nova - Corporate site template
+                                                  'REVIEWS'
 
                                                   <br><br><br><br><br><br><br><br><br>
                                               </h3>
 
-                                              <h5 style="text-align:right;">--- &nbsp;Sachin Gupta</h5><br>
+                                              <h5 style="text-align:right;">--- &nbsp;Mohit Sharma</h5><br>
                                           </div>
                                       </div>
                                   </div>
@@ -330,12 +350,12 @@
                                           <div class="item-inner">
 
                                               <h3>
-                                                  Nova - Corporate site template
+                                                  'REVIEWS'
 
                                                   <br><br><br><br><br><br><br><br><br>
                                               </h3>
 
-                                              <h5 style="text-align:right;">--- &nbsp;Sachin Gupta</h5><br>
+                                              <h5 style="text-align:right;">--- &nbsp;Pranav Garg</h5><br>
                                           </div>
                                       </div>
                                   </div>
@@ -345,12 +365,12 @@
                                           <div class="item-inner">
 
                                               <h3>
-                                                  Nova - Corporate site template
+                                                  'REVIEWS'
 
                                                   <br><br><br><br><br><br><br><br><br>
                                               </h3>
 
-                                              <h5 style="text-align:right;">--- &nbsp;Sachin Gupta</h5><br>
+                                              <h5 style="text-align:right;">--- &nbsp;Priyanshi Agrawal</h5><br>
                                           </div>
                                       </div>
                                   </div>
