@@ -14,8 +14,10 @@ include 'stcheck.php';
 include 'adcheck.php';
 if(isset($_SESSION['login_admin'])){
   header('location: adlogin.php');
+  
 }elseif(isset($_SESSION['login_staff'])){
   header('location: stlogin.php');
+  include 'st_logs.php';
 }
 ?>
 

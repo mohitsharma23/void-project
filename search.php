@@ -1,4 +1,9 @@
-
+<?php
+include 'logs.php';
+if($con == 53){
+  die();
+}
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -35,7 +35,7 @@
     }else if(isset($_SESSION['login_admin'])){
       include "admenu.php";
     }
-
+include 'st_logs.php';
    ?>
     <!-- <header class="navbar navbar-inverse navbar-fixed-top wet-asphalt" role="banner">
         <div class="container">
@@ -66,7 +66,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    <h1>Welcome user!!</h1>
+                    <h1>Welcome user!!<?php echo $_SESSION['login_time']; ?></h1>
                 </div>
             </div>
         </div>

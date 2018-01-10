@@ -13,7 +13,7 @@ session_start();
         $error = "Enter Username/Password";
       }else{
         include "connect.php";
-
+        
         $sid = $_POST['sid'];
         $password = $_POST['pass'];
 
