@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 10, 2018 at 07:20 PM
+-- Generation Time: Jan 10, 2018 at 10:14 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.5.38
 
@@ -167,6 +167,25 @@ CREATE TABLE `funds` (
   `date` date NOT NULL,
   `fund` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `logs`
+--
+
+CREATE TABLE `logs` (
+  `mac` varchar(200) NOT NULL,
+  `date` date NOT NULL,
+  `count` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `logs`
+--
+
+INSERT INTO `logs` (`mac`, `date`, `count`) VALUES
+('2C-33-7A-06-94-03', '2018-01-10', 3);
 
 -- --------------------------------------------------------
 
@@ -364,6 +383,27 @@ INSERT INTO `staff_login` (`sid`, `password`) VALUES
 ('3', 'mahesh'),
 ('4', 'ramesh');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `staff_logs`
+--
+
+CREATE TABLE `staff_logs` (
+  `sid` int(11) NOT NULL,
+  `login_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `logout_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `type` varchar(2) NOT NULL DEFAULT 's'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `staff_logs`
+--
+
+INSERT INTO `staff_logs` (`sid`, `login_time`, `logout_time`, `type`) VALUES
+(11, '2018-01-10 21:03:45', '2018-01-10 21:03:48', 's'),
+(11, '2018-01-10 21:04:15', '2018-01-10 21:04:17', 's');
+
 --
 -- Indexes for dumped tables
 --
@@ -419,6 +459,12 @@ ALTER TABLE `funds`
   ADD KEY `ngoid` (`ngoid`);
 
 --
+-- Indexes for table `logs`
+--
+ALTER TABLE `logs`
+  ADD PRIMARY KEY (`mac`);
+
+--
 -- Indexes for table `master`
 --
 ALTER TABLE `master`
@@ -470,6 +516,12 @@ ALTER TABLE `staff_attendance`
 --
 ALTER TABLE `staff_login`
   ADD PRIMARY KEY (`sid`);
+
+--
+-- Indexes for table `staff_logs`
+--
+ALTER TABLE `staff_logs`
+  ADD KEY `sid` (`sid`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -550,6 +602,12 @@ ALTER TABLE `staff`
 --
 ALTER TABLE `staff_attendance`
   ADD CONSTRAINT `staff_attendance_ibfk_1` FOREIGN KEY (`sid`) REFERENCES `master` (`id`) ON UPDATE CASCADE;
+
+--
+-- Constraints for table `staff_logs`
+--
+ALTER TABLE `staff_logs`
+  ADD CONSTRAINT `staff_logs_ibfk_1` FOREIGN KEY (`sid`) REFERENCES `staff` (`sid`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
