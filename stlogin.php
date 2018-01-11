@@ -66,7 +66,7 @@ include 'st_logs.php';
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    <h1>Welcome user!!<?php echo $_SESSION['login_time']; ?></h1>
+                    <h1>Welcome user!!</h1>
                 </div>
             </div>
         </div>

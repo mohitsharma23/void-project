@@ -64,9 +64,27 @@
         <div class="form-group">
               <label class="control-label col-sm-3" for="adhid">Adhaar ID of Reporter:</label>
               <div class="col-sm-6">
-                <input type="text" class="form-control" placeholder="Enter Adhaar Id" name="adhid" required>
+                <input type="text" class="form-control" placeholder="Enter Adhaar Id" name="adhid"  maxlength="12" required>
               </div>
             </div>
+            <div class="form-group">
+                  <label class="control-label col-sm-3" for="adhid">Email ID:</label>
+                  <div class="col-sm-6">
+                    <input type="text" class="form-control" placeholder="Enter Email Id" name="email" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                      <label class="control-label col-sm-3" for="adhid">Contact:</label>
+                      <div class="col-sm-6">
+                        <input type="text" class="form-control" placeholder="Enter Contact NO" name="contact"  maxlength="10" required>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-sm-3" for="place_found">Enter name of child:</label>
+                      <div class="col-sm-6">
+                        <input type="text" class="form-control" placeholder="Enter Name of child" name="name_of_child">
+                      </div>
+                    </div>
             <div class="form-group">
               <label class="control-label col-sm-3" for="place_found">Place Found:</label>
               <div class="col-sm-6">
@@ -80,9 +98,15 @@
               </div>
             </div>
             <div class="form-group">
+              <label class="control-label col-sm-3" for="date_when_found">Nearest Police Station:</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control" placeholder="Enter nearest Police Station" name="police" required>
+              </div>
+            </div>
+            <div class="form-group">
               <label class="control-label col-sm-3" for="cmt">Any Message:</label>
               <div class="col-sm-6">
-                <input type="textarea" class="form-control" placeholder="Your message" name="cmt">
+                <textarea rows="4" cols="50" name="comment"></textarea>
               </div>
             </div>
             <div class="form-group">

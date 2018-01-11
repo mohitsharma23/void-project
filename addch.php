@@ -70,7 +70,7 @@ $id = $row['ngoid'];
         <div class="form-group">
               <label class="control-label col-sm-3" for="adhid">Adhaar ID:</label>
               <div class="col-sm-6">
-                <input type="text" class="form-control" placeholder="Enter Adhaar Id" name="adhid">
+                <input type="text" class="form-control" placeholder="Enter Adhaar Id" name="adhid" maxlength="12">
               </div>
             </div>
             <div class="form-group">

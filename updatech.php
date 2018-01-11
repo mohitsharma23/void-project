@@ -243,7 +243,7 @@ if(isset($_SESSION['login_admin'])){
 ?>
 
 
-    <footer id="footer" class="midnight-blue">
+    <footer id="footer" class="midnight-blue" style="position:fixed;width:100%;bottom:0;">
          <div class="container">
              <div class="row">
                  <div class="col-sm-6">

@@ -5,7 +5,8 @@ if($_POST){
 session_start();
   if($_POST['capcha']!=$_SESSION['capchaid']){
     echo $_SESSION['capchaid'];
-    die("Capcha was incorrect");
+    header('location: registration.php?check=1');
+    die();
     session_destroy();
   }else{
 

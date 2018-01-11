@@ -19,6 +19,7 @@
                   <ul class="dropdown-menu">
                     <li><a href="addst.php">Add</a></li>
                     <li><a href="updatest.php">Update</a></li>
+                    <li><a href="viewst.php">View</a></li>
                   </ul>
               </li>
               <li class="dropdown">
@@ -27,6 +28,7 @@
                   <ul class="dropdown-menu">
                     <li><a href="addch.php">Add</a></li>
                     <li><a href="updatech.php">Update</a></li>
+                    <li><a href="viewch.php">View</a></li>
                   </ul>
               </li>
                 <li><a href="ngoinfo.php">NGO Info</a></li>

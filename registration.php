@@ -8,7 +8,11 @@
     return true;
   }
 </script>
-
+<?php
+if(isset($_REQUEST['check'])){
+echo "<script>alert('Wrong captcha');</script>";
+}
+ ?>
 <?php
 session_start();
 include 'stcheck.php';

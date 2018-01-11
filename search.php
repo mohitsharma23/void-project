@@ -55,8 +55,8 @@ date_default_timezone_set('Asia/Kolkata');
 $date = date('Y-m-d');
 
  ?>
-
-
+<br><br><br>
+<center><h2>For refined search, use atleast one of the filters</h2></center>
 <section class="search_main container">
 <form action="search.php" method="POST">
   <div class="row center">
@@ -70,7 +70,7 @@ $date = date('Y-m-d');
     <div class="col-sm-4">
       <div class="form-group">
         <label for="age">Enter Adhaar ID:</label>
-          <input type="text" class="form-control" id="age" name="by_adhid">
+          <input type="text" class="form-control" id="age" name="by_adhid" maxlength="12">
       </div>
     </div>
     <div class="col-sm-4">
@@ -97,7 +97,7 @@ if(isset($_POST['submit'])){
     $by_adhid = $_POST['by_adhid'];
     $by_place = $_POST['by_place'];
 
-    $query = "SELECT * from child WHERE dob LIKE '%$by_dob%' AND adhid = '$by_adhid' AND place_found = '$by_place' AND reason='lost'";
+    $query = "SELECT * from child WHERE dob = '$by_dob' OR adhid = '$by_adhid' OR place_found = '$by_place' AND reason='lost'";
 
     $sql = $query;
     $res = mysql_query($sql);
@@ -117,14 +117,14 @@ if(isset($_POST['submit'])){
     </div>
     <div class="col-sm-3">
       <p><strong>Name : </strong><?php echo $data['name']; ?></p>
-      <p><strong>Date when Found : </strong><?php echo $data['date_when_found']; ?></p>
+
     </div>
     <div class="col-sm-3">
       <p><strong>Place Found : </strong><?php echo $data['place_found']; ?></p>
-      <p><strong>Adhaar ID : </strong><?php echo $data['adhid']; ?></p>
+      <p><strong>Date when Found : </strong><?php echo $data['date_when_found']; ?></p>
     </div>
     <div class="col-sm-2">
-      <p><strong>NGO ID : </strong><?php echo $nrow['ngoid']; ?></p>
+      <p><strong>NGO Name : </strong><?php echo $nrow['name']; ?></p>
       <p><strong>NGO City : </strong><?php echo $nrow['city']; ?></p>
     </div>
     </div>
@@ -140,7 +140,7 @@ if(isset($_POST['submit'])){
 }
 ?>
 
-    <footer id="footer" class="midnight-blue">
+    <footer id="footer" class="midnight-blue" style="position:fixed;width:100%;bottom:0;">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
